@@ -1,0 +1,138 @@
+/*!
+ * One Development - Somelist CSS v1.0.0 (https://somelist.tk/)
+ * Copyright 2021 One Development - All Rights Reserved.
+ * Some tailwind included. (https://tailwindcss.com/)
+ */
+
+:root {
+    --ch1ll-dark: #001037;
+    --ch1ll-dark-2: #111b35;
+    --ch1ll-dark-light: #000d2b;
+    --ch1ll-light: rgb(255, 255, 255, 0.6);
+    --ch1ll-color: #0d1014;
+    --ch1ll-color-2: rgba(255, 255, 255, 0.05);
+    --ch1ll-yellow: #dee03b;
+    --scroll-bar-size: 10px;
+    --scroll-bar-thumb-background-color: hsla(0, 0%, 100%, 0.1);
+    --scroll-bar-thumb-background-color-active: hsla(0, 0%, 100%, 0.15);
+}
+
+
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+
+[data-theme='light']{
+    --bg-color: #fff;
+    --thumb: #f3f4f6;
+    --thumb-hover: #e5e7eb;
+    --color: #555;
+    --tooltip-bg: #f9fafb;
+}
+[data-theme='dark']{
+    --bg-color: #0b0a15;
+    --thumb: #3f3f46;
+    --thumb-hover: #555;
+    --color: #fff;
+    --tooltip-bg: #151125;
+}
+
+body {
+    --np-color: #fff;
+    color: var(--color);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: var(--bg-color);
+    background-size: 22px 22px;
+    font-family: "Righteous", Arial, Helvetica, sans-serif;
+}
+
+
+a {
+    color: var(--color);
+    text-decoration: none !important;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--thumb);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--thumb-hover);
+    width: 10px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* @import "./components/wrapper.module.css"; */
+/* @import "./components/buttons.module.css";
+@import "./components/gradients.module.css";
+@import "./components/icons.module.css";
+@import "./components/text.module.css"; */
+@import "./components/custom.module.css";
+
+@import "./sections/loader.module.css";
+@import "./sections/navbar.module.css";
+
+
+[color-theme="sky"] {
+    --gradient: #0ea5e9;
+    --prim900: 12, 74, 110;
+    --prim800: 7, 89, 133;
+    --prim700: 3, 105, 161;
+    --prim600: 2, 132, 199;
+    --prim500: 14, 165, 233;
+    --prim400: 56, 189, 248;
+    --prim300: 125, 211, 252;
+    --prim200: 186, 230, 253;
+    --prim100: 224, 242, 254;
+    --prim50: 240, 249, 255;
+}
+
+[color-theme="red"] {
+    --gradient: rgba(239, 68, 68);
+    --prim900: 127, 29, 29;
+    --prim800: 153, 27, 27;
+    --prim700: 185, 28, 28;
+    --prim600: 220, 38, 38;
+    --prim500: 239, 68, 68;
+    --prim400: 248, 113, 113;
+    --prim300: 252, 165, 165;
+    --prim200: 254, 202, 202;
+    --prim100: 254, 226, 226;
+    --prim50: 254, 242, 242;
+}
+
+[color-theme="emerald"] {
+    --gradient: rgba(16, 185, 129);
+    --prim900: 6, 78, 59;
+    --prim800: 6, 95, 70;
+    --prim700: 4, 120, 87;
+    --prim600: 5, 150, 105;
+    --prim500: 16, 185, 129;
+    --prim400: 52, 211, 153;
+    --prim300: 110, 231, 183;
+    --prim200: 167, 243, 208;
+    --prim100: 209, 250, 229;
+    --prim50: 236, 253, 245;
+}

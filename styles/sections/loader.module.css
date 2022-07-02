@@ -1,0 +1,16 @@
+/* Loader */
+.preloader {
+    z-index: 10000;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: ease-in-out all 0.5s;
+}
+
+.preloaded {
+    opacity: 0;
+    pointer-events: none;
+}

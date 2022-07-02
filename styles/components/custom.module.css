@@ -1,0 +1,153 @@
+div#gradient {
+    --color-primary: var(--gradient);
+    --color-gradient-1: var(--gradient);
+    --color-gradient-2: var(--gradient);
+    --color-gradient-3: var(--gradient);
+    --color-gradient-4: var(--gradient);
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: linear-gradient(var(--gradient) -450px, var(--bg-color) 100%);
+    max-height: 800px;
+    height: 80vh;
+    width: 100vw;
+    filter: blur(44px);
+    z-index: -1;
+    opacity: 25%;
+    position: fixed;
+}
+
+.search-show {
+    animation: mymove 0.3s;
+    margin-top: 0px;
+    opacity: 1;
+    backdrop-filter: blur(44px);
+}
+
+.line-clamp-2 {
+    -webkit-line-clamp: 2;
+    -moz-line-clamp: 2;
+    line-clamp: 2;
+}
+
+@keyframes mymove {
+    from {
+        margin-top: 30px;
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to {
+        margin-top: 0px;
+        opacity: 1;
+        backdrop-filter: blur(44px);
+    }
+}
+
+button:disabled {
+    opacity: 0.75;
+}
+
+td {
+    padding: 15px 10px;
+}
+
+th {
+    padding: 0 10px;
+}
+
+#longdescwrapper h1 {
+    font-size: 2em;
+}
+#longdescwrapper h2 {
+    font-size: 1.5em;
+}
+#longdescwrapper h3 {
+    font-size: 1.17em;
+}
+#longdescwrapper h4 {
+    font-size: 1em;
+}
+#longdescwrapper h5 {
+    font-size: 0.83em;
+}
+#longdescwrapper h6 {
+    font-size: 0.75em;
+}
+
+.pagetransition {
+    animation: fadeIn 0.5s;
+    opacity: 1;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.high-graphs {
+    background-image: url("https://img.freepik.com/free-vector/space-background-with-planet-landscape_107791-6146.jpg?w=2000") !important;
+    position: fixed !important;
+    height: 100vh;
+    width: 100vw;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu {
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.tab {
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    margin-right: 15px;
+    max-width: 200px;
+    position: relative;
+    cursor: pointer;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    z-index: 11;
+    min-width: 0;
+    user-select: none;
+}
+
+.oldunderline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    border-radius: 5px;
+    z-index: 10;
+    background: #0284c7;
+}
+
+.underline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    border-radius: 20px;
+    margin-top: 50px;
+    z-index: 10;
+    background: #0284c7;
+}
+
+.sidenavbot-show {
+    display: block;
+}
