@@ -249,7 +249,7 @@ const SecretNav = (props) => {
       </Popover>
       <Menu as="div" className="ml-4 relative inline-block text-left">
         <Menu.Button className='ml-auto text-lg font-semibold text-white/70 hover:text-white/90'>
-          <img src={avatar} width='50' height='50' className='rounded-full' />
+          {props.isLoggedIn ? <img src={avatar} width='50' height='50' className='rounded-full' /> : <i className='fad fa-user-circle' style={{fontSize: '50px'}}/>}
         </Menu.Button>
         {/* Use the Transition component. */}
         <Transition
@@ -261,6 +261,8 @@ const SecretNav = (props) => {
           leaveTo="transform scale-95 opacity-0"
         >
           <Menu.Items className={'backdrop-blur absolute right-0 w-56 mt-2 origin-top-right bg-[#E3E5E8]/70 dark:bg-[#080712]/70 rounded p-3 py-4'} style={{ position: 'aboslute' }}>
+            {props.isLoggedIn &&
+            <>
             <Menu.Item>
               {({ active }) => (
                 <button
@@ -271,7 +273,9 @@ const SecretNav = (props) => {
                 </button>
               )}
             </Menu.Item>
-            <br />
+              <br />
+            </>
+            }
             <Menu.Item>
               {({ active }) => (
                 <button
@@ -283,7 +287,8 @@ const SecretNav = (props) => {
               )}
             </Menu.Item>
             <br />
-            <Menu.Item>
+            {props.isLoggedIn &&
+            <><Menu.Item>
               {({ active }) => (
                 <button
                   className={`my-2 w-full text-left text-lg ${active ? 'text-sky-500' : 'dark:text-white/70'}`}
@@ -294,16 +299,31 @@ const SecretNav = (props) => {
               )}
             </Menu.Item>
             <br />
+            </>
+            }
+            {props.isLoggedIn ? 
             <Menu.Item>
-              {({ active }) => (
+              {({ active }) => 
                 <button
                   className={`my-2 w-full text-left text-lg ${active ? 'text-sky-500' : 'dark:text-white/70'}`}
                   onClick={() => { router.push('/logout') }}
                 >
                   <i className="far fa-sign-out text-sky-500" /> Logout
                 </button>
-              )}
+              }
             </Menu.Item>
+            :
+            <Menu.Item>
+              {({ active }) => 
+                <button
+                  className={`my-2 w-full text-left text-lg ${active ? 'text-sky-500' : 'dark:text-white/70'}`}
+                  onClick={() => { window.location.replace(`https://api.somelist.tk/login?branch=` + process.env.NEXT_PUBLIC_BRANCH) }}
+                >
+                  <i className="far fa-sign-in text-sky-500" /> Sign in
+                </button>
+              }
+            </Menu.Item>
+            }
             {/* ... */}
           </Menu.Items>
         </Transition>
@@ -343,7 +363,7 @@ const HeaderB = ({ isLoggedIn }) => {
             {!sideNavOpen ? <i className='fas fa-bars' /> : <i className='fas fa-times' />}
           </button>
         </div>
-        {isLoggedIn ? <SecretNav /> : <button className='ml-auto text-lg font-semibold text-white/70 hover:text-white/90' onClick={() => { window.location.replace(`https://api.somelist.tk/login?branch=` + process.env.NEXT_PUBLIC_BRANCH) }}>Login</button>}
+        <SecretNav isLoggedIn={isLoggedIn}/>
       </div>
     </>
   )

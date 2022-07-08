@@ -8,6 +8,7 @@ import { Fragment } from 'react'
 import $ from 'jquery'
 
 import HeaderB from "../../components/Navbar.jsx"
+import Reviews from "../../components/Reviews.jsx"
 export default function BotPage({isLoggedIn, botdata}){
     const router = useRouter()
 
@@ -157,6 +158,7 @@ export default function BotPage({isLoggedIn, botdata}){
                             </p>
                         </div>
                         </div>
+                        
                     </div>
                     <div className="flex-shrink-0 lg:ml-56 flex items-center flex-col">
                         <button
@@ -291,7 +293,8 @@ export default function BotPage({isLoggedIn, botdata}){
                             <div className="w-full h-full" id='longdescwrapper' dangerouslySetInnerHTML={{ __html: botdata.longdesc }} style={{overflowWrap: 'break-word'}}>
 
                             </div>
-                            </div>
+                        </div>
+                        <Reviews reviews={botdata.reviews} botdata={botdata}/>
                         </div>
                         <div className="col-span-3 w-full">
                             <div
