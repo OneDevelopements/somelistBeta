@@ -340,7 +340,6 @@ const HeaderB = ({ isLoggedIn }) => {
       else setNavbar(false)
     })
 
-    if (!isLoggedIn && process.env.NEXT_PUBLIC_BRANCH == 'beta') window.location.href = 'https://api.somelist.tk/login?branch=beta';
   }, [])
 
   const [sideNavOpen, setSideNavOpen] = useState(false)
