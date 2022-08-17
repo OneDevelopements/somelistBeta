@@ -96,7 +96,7 @@ a {
 
 
 [color-theme="sky"] {
-    --gradient: #0ea5e9;
+    --gradient: 14, 165, 233;
     --prim900: 12, 74, 110;
     --prim800: 7, 89, 133;
     --prim700: 3, 105, 161;
@@ -110,7 +110,7 @@ a {
 }
 
 [color-theme="red"] {
-    --gradient: rgba(239, 68, 68);
+    --gradient: 239, 68, 68;
     --prim900: 127, 29, 29;
     --prim800: 153, 27, 27;
     --prim700: 185, 28, 28;
@@ -124,7 +124,7 @@ a {
 }
 
 [color-theme="emerald"] {
-    --gradient: rgba(16, 185, 129);
+    --gradient: 16, 185, 129;
     --prim900: 6, 78, 59;
     --prim800: 6, 95, 70;
     --prim700: 4, 120, 87;

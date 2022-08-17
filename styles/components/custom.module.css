@@ -6,7 +6,7 @@ div#gradient {
     --color-gradient-4: var(--gradient);
     left: 50%;
     transform: translateX(-50%);
-    background-image: linear-gradient(var(--gradient) -450px, var(--bg-color) 100%);
+    background-image: radial-gradient(rgba(var(--gradient), 0.5), #000);
     max-height: 800px;
     height: 80vh;
     width: 100vw;
