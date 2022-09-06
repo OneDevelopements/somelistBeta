@@ -12,6 +12,10 @@ Support for self-hosting is partially supported, we will answer queries from our
 
 **Use at your own risk! 📢**
 
+## Self Hosting Guide
+
+*Coming Soon 👀*
+
 ### Consider supporting us on our [discord server](https://discord.gg/AKHZHyGwMX)!
 
 
